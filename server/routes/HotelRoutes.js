@@ -2,13 +2,12 @@ const express = require('express');
 const hotelRouter = express.Router();
 const hotelsData = require('../data/data.json');
 
-hotelRouter.route('/api/hotel')
+hotelRouter.route('/api/hotels/GetAll')
   .get((req, res) => {
-    console.log(hotelsData);
     res.send(hotelsData);
   });
 
-hotelRouter.route('/api/hotel/:id')
+hotelRouter.route('/api/hotels/:id')
   .get((req, res) => {
     res.send(hotelsData);
   });
