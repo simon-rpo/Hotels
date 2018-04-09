@@ -34,3 +34,25 @@ export function getAllHotels() {
   };
 }
 // #endregion
+
+// #region "Filter Hotels"
+export function setfilterHotels(Hotels, filter, type) {
+  return {
+    type: type,
+    Hotels,
+    filter,
+  };
+}
+
+export function filterHotels(Hotels, filter) {
+  return dispatch => {
+    dispatch(setfilterHotels(Hotels, filter, 'FILTER_HOTELS'));
+  };
+}
+
+export function filterStars(Hotels, filter) {
+  return dispatch => {
+    dispatch(setfilterHotels(Hotels, filter, 'FILTER_HOTEL_STARS'));
+  };
+}
+// #endregion

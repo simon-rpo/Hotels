@@ -1,6 +1,7 @@
 const initialState = {
   hotels: [],
   loading: false,
+  hotelsFiltered: [],
 };
 
 export default function hotelsReducer(state = initialState, action) {
@@ -22,6 +23,20 @@ export default function hotelsReducer(state = initialState, action) {
       return {
         ...state,
         loading: false,
+      };
+    }
+    case 'FILTER_HOTELS': {
+      return {
+        ...state,
+        hotelsFiltered: action.Hotels.filter(
+          a => a.name.toLowerCase().indexOf(action.filter) >= 0,
+        ),
+      };
+    }
+    case 'FILTER_HOTEL_STARS': {
+      return {
+        ...state,
+        hotelsFiltered: action.Hotels.filter(a => a.stars === action.filter),
       };
     }
     default:

@@ -36,17 +36,6 @@ const Document = () => {
           <div className="Title">
             <Logo src={`${process.env.PUBLIC_URL}/img/almundo.png`} />
           </div>
-          <Menu
-            theme="dark"
-            mode="horizontal"
-            forceSubMenuRender
-            style={{ lineHeight: '64px' }}>
-            {routes.map(route => (
-              <Menu.Item key={route.index}>
-                <Link to={route.path}>{route.name}</Link>
-              </Menu.Item>
-            ))}
-          </Menu>
         </Header>
         <Content style={{ padding: '0 25px', paddingTop: 10 }}>
           {/* <div

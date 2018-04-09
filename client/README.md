@@ -1,91 +1,52 @@
-### This is a boilerplate for React project.
+# Hotels -Almundo- Front End
 
-#### It uses the following modules:
-1. [React](https://reactjs.org) ([Create React App](https://github.com/facebook/create-react-app))
-2. [Redux](https://redux.js.org) ([Redux Thunk](https://github.com/gaearon/redux-thunk))
-3. [React Router v4](https://reacttraining.com/react-router/)
-4. [Ant Design](https://ant.design)
-5. [Less](http://lesscss.org) for Ant Design customization
-6. [Styled Components](https://www.styled-components.com)
-7. [Axios](https://github.com/axios/axios)
+Simple app for hotels like "Almundo". Build in React-Redux.
+Also using "styled-components" for easy css.
 
-#### Install dependencies:
+## Install
 
-```
-yarn
-```
-or
-```
+ES
+-> En el path de \client se encuentra el front-end de esta aplicacion
+al estar en este retornar las dependencias de npm para la app.
+
+```console
 npm install
 ```
+si usas yarn
+```console
+yarn install
+```
 
-#### Start project:
-
-```
-yarn start
-```
-or
-```
+inicia la aplicacion de front-end...
+```console
 npm start
 ```
-
-#### Structure folders
-```
-my-app
-├── public
-│   └──  index.html
-└── src
-    └── api
-       └── instance.js
-    └── components
-       └── AsyncComponent.js
-    └── pages
-        └── Layout.js
-    └── state(Redux)
-        └── store.js
-        └── reducers.js
-    └── styles(Less and styled components)
-        └── index.less
-    └── utils
-    └── index.js
-    └──  routes.js
+si usas yarn
+```console
+yarn start
 ```
 
-#### Add news routes
+Recuerda que si back-end no esta levantado no se podra cargar información de Hoteles.
 
-Adding routes, modify src/routes.js file:
+EN
+-> In the path \client remains the fron-end app.
+When you're in the path just do it the next for getting npm dependencies.
 
-```javascript
-export default [
-  // path, component, exact
-  createRoute('/', Home, true),
-];
+```console
+npm install
+```
+using yarn just
+```console
+yarn install
 ```
 
-Code Splitting:
-
-```javascript
-export default [
-  // path, component, exact
-  createRoute(
-    '/home',
-    asyncComponent(() =>
-      import('./pages/Home.js').then(module => module.default),
-    ),
-  ),
-];
+starting the front-end app...
+```console
+npm start
+```
+using yarn just
+```console
+yarn start
 ```
 
-#### Customization Ant Design
-
-For custom Ant Design styles, modify src/styles/index.less, the Less variables that you can modify [here.](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less)
-
-#### API Configuration
-
-Do not import **axios** directly but import the instance of axios from **api/instance.js**.
-
-For Url API config add Key **REACT_APP_API** to .env files.
-
-```
-REACT_APP_API=http://localhost/my-api
-```
+Remember, if the back-end it's not started, you will not be able to getting hotels information.

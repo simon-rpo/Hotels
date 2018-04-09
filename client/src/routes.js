@@ -12,7 +12,7 @@ const createRoute = (url, component, exact = false) => ({
 
 export default [
   createRoute(
-    '/Hotels',
+    '/',
     asyncComponent(() =>
       import('./pages/HotelsPage.js').then(module => module.default),
     ),
