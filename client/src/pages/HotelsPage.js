@@ -42,9 +42,9 @@ const Amenitie = styled.img`
 
 const SpinStyled = styled(Spin)`
   width: auto !important;
-  padding-left: 60%;
+  padding-left: 100%;
   top: 50px;
-  margin-top: -246px;
+  margin-top: -240px;
 `;
 
 const RadioStyled = styled(Radio)`
@@ -104,9 +104,11 @@ class Hotels extends Component {
       HotelsData.map((item, index) => {
         let stars = [];
         let amenities = [];
+
         item.amenities.map((ameni, index) => {
           amenities.push(
             <Amenitie
+              key={index}
               src={`${process.env.PUBLIC_URL}/img/amenities/${ameni}.svg`}
             />,
           );
@@ -114,18 +116,20 @@ class Hotels extends Component {
 
         const HotelImage = (
           <img
+            key={index}
             id={index}
             src={`${process.env.PUBLIC_URL}/img/hotels/${item.image}`}
             alt=""
             style={{
               maxWidth: '289px',
               maxHeight: '213px',
-              Height: 'inherit !important',
+              Height: 'auto',
+              width: '100%',
             }}
           />
         );
         const HotelInfo = (
-          <div>
+          <div key={index}>
             <h1 style={{ color: '#134385', fontSize: '18px' }}>{item.name}</h1>
             {new Array(item.stars).fill(<Star type="star" />)}
             <br />
@@ -149,7 +153,7 @@ class Hotels extends Component {
         );
         CardHotel.push(
           <div key={index} style={{ padding: '5px' }}>
-            <Card key={index} hoverable Title="Card">
+            <Card key={index} hoverable style={{ minWidth: '300px' }}>
               <Row>
                 <Desktop>
                   <Col span={10}>{HotelImage}</Col>

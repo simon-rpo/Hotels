@@ -38,16 +38,9 @@ const Document = () => {
           </div>
         </Header>
         <Content style={{ padding: '0 25px', paddingTop: 10 }}>
-          {/* <div
-            style={{
-              background: '#fff',
-              paddingTop: '5px',
-              minHeight: 'calc(100vh - 8px)',
-            }}> */}
-          <div style={{ flex: 1, padding: '10px' }}>
+          <div style={{ flex: 1, padding: '5px', minHeight: '768px' }}>
             <Routes />
           </div>
-          {/* </div> */}
         </Content>
         <Footer style={{ textAlign: 'center' }}>
           almundo ©2018 Created by Simon
