@@ -14,7 +14,13 @@
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "styled-components": "^3.2.1"
+    "styled-components": "^3.2.1",
+
+    "babel-cli": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "cors": "^2.8.4",
+    "debug": "^3.1.0",
+    "express": "^4.16.3"
   },
   "css": {
     "preprocess": "less"
@@ -30,12 +36,11 @@
     "build-css": "node-less-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-less-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js start-api",
+    "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "start-api": "npm start --prefix ../"
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.6.6",
@@ -54,7 +59,10 @@
     "node-less-chokidar": "^0.1.2",
     "npm-run-all": "^4.1.2",
     "prettier": "^1.11.1",
-    "redux-devtools-extension": "^2.13.2"
+    "redux-devtools-extension": "^2.13.2",
+
+    "concurrently": "^3.5.1",
+    "eslint-config-airbnb-base": "^12.1.0"
   },
   "proxy": "http://localhost:5000/"
 }

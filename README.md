@@ -5,7 +5,7 @@ Simple app for hotels like "Almundo". Build in React-Redux & Node.js - Express.
 ## Install
 
 ES
--> En el path de \ se encuentra el back-end de esta aplicacion
+-> En el path de \client se encuentra el back-end de esta aplicacion
 al estar en este retornar las dependencias de npm para la app.
 
 ```console

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   Card,
   Spin,
@@ -265,6 +266,16 @@ class Hotels extends Component {
     );
   }
 }
+
+Hotels.propTypes = {
+  hotels: PropTypes.array,
+  hotelsFiltered: PropTypes.array,
+  loading: PropTypes.bool,
+  getAllHotels: PropTypes.func,
+  filterHotels: PropTypes.func,
+  filterStars: PropTypes.func,
+};
+
 const mapStateToProps = state => {
   return {
     hotels: state.hotels.hotels,
